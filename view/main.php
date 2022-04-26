@@ -1,45 +1,81 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>fiveGG</title>
-    <link rel="stylesheet" href="./assets/css/styles.css">
-    <link rel="stylesheet" href="./assets/css/fonts/themify-icons/themify-icons.css">
-</head>
-<body>
+
    <div id="main">
        <!-- Phần đầu trang -->
         <div id="header">
             <!-- Logo home -->
-            <a href="" class="Logo" title="Trang chủ">
-                <img src="./assets/css/img/Logo.png">
+            <a href="http://localhost/web_5gg1/view" class="Logo" title="Trang chủ">
+                <img class="set-logo" src="../assets/css/img/Logo.png">
             </a>
             <div class="login-header">
-                <div class="login">
-                    <i class="ti-user"></i>
-                    <input type="text" class="Sign-in" placeholder="Tên đăng nhập" required>
-                    <i class="ti-unlock"></i>
-                    <input type="text" class="Password" placeholder="Mật khẩu" required>
+                <form class="login" action="./db/sign-in.php" method="POST">
+                    
+                        <i class="ti-user"></i>
+                        <input type="text" class="Sign-in" placeholder="Tên đăng nhập" name="username" id="username" required>
+                    
+                    
+                        <i class="ti-unlock"></i>
+                        <input type="password" class="Password" placeholder="Mật khẩu" name="password" id="password" required>
+                    
                     <button class="submit" type="submit"></button>
-                </div>
+                </form>
+                
                 <div class="Forgot">
                     <a href="">Bạn quên tài khoản hoặc mật khẩu?</a>
+                    <a onclick="document.getElementById('id01').style.display='block'" style="width:auto; cursor : pointer; color : blue; opacity : 0.8">Đăng ký</a>
+                    <div id="id01" class="modal">
+                        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                        <form class="modal-content" action="./db/sign-up.php" method="post">
+                            <div class="modal-container">
+                                <h1 style="text-align:center">Đăng ký tài khoản</h1>
+                                <p style="text-align:center">Vui lòng điền đầy đủ thông tin để tạo tài khoản!</p>
+                                <hr>
+                                <label for="fullname"><b style="float:left">Họ và tên</b></label>
+                                <input type="text" placeholder="Nhập họ và tên..." name="fullname" id="fullname">
+                                <label for="username"><b style="float:left">Tên đăng nhập</b></label>
+                                <input type="text" placeholder="Nhập tên tài khoản ..." name="username" id="username">
+                                <label for="phone"><b style="float:left">Số điện thoại</b></label>
+                                <input type="text" placeholder="Nhập số điện thoại..." name="phone" id="phone">
+                                <label for="email"><b style="float:left">Email</b></label>
+                                <input type="mail" placeholder="Nhập email..." name="email" id="email">
+                                <label for="password"><b style="float:left">Password</b></label>
+                                <input type="password" class="password-sg" placeholder="Nhập mật khẩu..." name="password" id="password">
+                                <label for="gender"><b>Giới tính</b></label>
+                                <div>
+                                    <div class="from-check">
+                                        <input class="from-check-input" type="radio" name="gender" checked id="male" value="male">
+                                        <label for="male" class="from-check-label">Nam</label>
+                                    </div>
+                                    <div class="from-check">
+                                        <input class="from-check-input" type="radio" name="gender"  id="female" value="female">
+                                        <label for="female" class="from-check-label">Nữ</label>
+                                    </div>
+                                </div>
+                                <label >
+                                    <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px ;"> Remember me
+                                </label>
+                                <!-- <div class="clearfix">
+                                    <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Hủy bỏ</button>
+                                    <button type="submit" class="signupbtn">Đăng ký</button>
+                                </div> -->
+                                <input type="submit" class="btn-dky" name="btn-reg" value="Đăng ký">
+                            </div>
+                        </form>
+                    </div>
+
                 </div>
-            </div>
+            </div> 
             <!-- Phần navigation -->
             <ul class="nav">
                 <div class="nav-bar">
-                    <li><a href="#">ITC-HCMUE  </a></li>
+                    <li><a href="http://localhost/web_5gg1/view">ITC-FIVEGG  </a></li>
                     <li><a href="#">Nhà của tôi</a></li>
                     <li>
                         <a href="#">Khóa học<i class="icon-down ti-angle-down"></i></a> 
                         <ul class="sub-nav">
-                            <li><a href="">Đào tạo giáo viên</a></li>
-                            <li><a href="">Đào tạo sinh viên</a></li>
-                            <li><a href="">Đào tạo nội bộ</a></li>
-                            <li><a href="">Đào tạo cộng đồng</a></li>
+                            <li><a href="http://localhost/web_5gg1/view/student_training.html">Đào tạo sinh viên</a></li>
+                            <li><a href="http://localhost/web_5gg1/view/teacher_training.html">Đào tạo giáo viên</a></li>
+                            <li><a href="http://localhost/web_5gg1/view/staff_training.html">Đào tạo nội bộ</a></li>
+                            <li><a href="http://localhost/web_5gg1/view/public_training.html">Đào tạo cộng đồng</a></li>
                         </ul>
                     </li>
                     <li>
@@ -60,44 +96,44 @@
             <!-- Slide-Show -->
             <div class="slidershow">
                 <div class="slides">
-                    <img class="slide" src="./assets/css/img/Slider/slide1.jpg" alt="">
-                    <img class="slide" src="./assets/css/img/Slider/slide2.jpg" alt="">
-                    <img class="slide" src="./assets/css/img/Slider/slide3.jpg" alt="">
-                    <img class="slide" src="./assets/css/img/Slider/slide4.jpg" alt="">
+                    <img class="slide" src="../assets/css/img/Slider/slide1.jpg" alt="">
+                    <img class="slide" src="../assets/css/img/Slider/slide2.jpg" alt="">
+                    <img class="slide" src="../assets/css/img/Slider/slide3.jpg" alt="">
+                    <img class="slide" src="../assets/css/img/Slider/slide4.jpg" alt="">
                 </div>
             </div>
         </div>
-    
+        
        <!-- Phần thân trang -->
        <div id="content">
             <div class="logo2">
-                <img class="logo-item" src="./assets/css/img/logo-2.png">
+                <img class="logo-item" src="../assets/css/img/Logo.png">
             </div>
             <div class="videos">
-                <video class="video" src="./assets/css/video/Gioi thieu elearning TTTH DHSPHCM.mp4" controls></video>
+                <video class="video" src="../assets/css/video/Gioi thieu elearning TTTH DHSPHCM.mp4" controls></video>
             </div>
        </div>
        <div class="line01"></div>
        <!-- Phần nội dung chính -->
        <div id="container">
            <div class="container-text1">
-               <h4>Giới thiệu:</h4>
+               <h4>Sự lựa chọn hoàn hảo dành cho bạn</h4>
                <p>
-                   "Hệ thống đào tạo trực tuyến FiveGG được thành lập nhằm mục đích phục vụ cho vấn đề học tập trong thời gian phòng chống dịch COVID-19 hiện nay. Và để khắc phục khó khăn của thầy cô, nhà trường, phụ huynh, giúp cho hành trình học tập của sinh viên không bị gián đoạn, đạt hiệu quả như mong muốn. Hệ thống hỗ trợ cho bốn (4) loại chương trình đào tạo, bao gồm:"
+                "Hệ thống đào tạo trực tuyến FiveGG được thành lập nhằm mục đích phục vụ cho vấn đề học tập trong thời gian phòng chống dịch COVID-19 hiện nay. Và để khắc phục khó khăn của thầy cô, nhà trường, phụ huynh, giúp cho hành trình học tập của sinh viên không bị gián đoạn, đạt hiệu quả như mong muốn. Hệ thống hỗ trợ cho bốn (4) loại chương trình đào tạo, bao gồm:"
                </p>
            </div>
            <!-- Ảnh các sự lựa chọn -->
            <ul class="container-select">
                 <li class="container-box">
                     <p style="text-align: center;">
-                        <img src="./assets/css/img/img-container/imgcontainer1.png" alt="" class="container-img">
+                        <img src="../assets/css/img/img-container/imgcontainer1.png" alt="" class="container-img">
                     </p>
                     <div class="container-text" style="text-align: center;">
                         <h4>Đào tạo sinh viên</h4>
                         (Student Training)
                     </div>
                     <p style="text-align: center;">
-                        <a href="#" class="container-btn">
+                        <a href="http://localhost/web_5gg1/view/student_training.html" class="container-btn">
                             THAM GIA
                         </a>
                     </p>
@@ -105,14 +141,14 @@
 
                 <li class="container-box">
                     <p style="text-align: center;">
-                        <img src="./assets/css/img/img-container/imgcontainer2.png" alt="" class="container-img">
+                        <img src="../assets/css/img/img-container/imgcontainer2.png" alt="" class="container-img">
                     </p>
                     <div class="container-text" style="text-align: center;">
                         <h4>Đào tạo giáo viên</h4>
                         (Teacher Training)
                     </div>
                     <p style="text-align: center;">
-                        <a href="#" class="container-btn">
+                        <a href="http://localhost/web_5gg1/view/teacher_training.html" class="container-btn">
                             THAM GIA
                         </a>
                     </p>
@@ -120,14 +156,14 @@
 
                 <li class="container-box">
                     <p style="text-align: center;">
-                        <img src="./assets/css/img/img-container/imgcontainer3.png" alt="" class="container-img">
+                        <img src="../assets/css/img/img-container/imgcontainer3.png" alt="" class="container-img">
                     </p>
                     <div class="container-text" style="text-align: center;">
                         <h4>Đào tạo nội bộ</h4>
                         (Staff Training)
                     </div>
                     <p style="text-align: center;">
-                        <a href="#" class="container-btn">
+                        <a href="http://localhost/web_5gg1/view/staff_training.html" class="container-btn">
                             THAM GIA
                         </a>
                     </p>
@@ -135,14 +171,14 @@
 
                 <li class="container-box">
                     <p style="text-align: center;">
-                        <img src="./assets/css/img/img-container/imgcontainer4.png" alt="" class="container-img">
+                        <img src="../assets/css/img/img-container/imgcontainer4.png" alt="" class="container-img">
                     </p>
                     <div class="container-text" style="text-align: center;">
                         <h4>Đào tạo cộng đồng</h4>
                         (Public Training)
                     </div>
                     <p style="text-align: center;">
-                        <a href="#" class="container-btn">
+                        <a href="http://localhost/web_5gg1/view/public_training.html" class="container-btn">
                             THAM GIA
                         </a>
                     </p>
@@ -197,7 +233,7 @@
            <!-- Đội ngũ giảng viên -->
            <div class="container-staff">
                <div class="img-container-staff">
-                   <img class="img-staff" src="./assets/css/img/img-container/img-container-staff.jpg" alt="">
+                   <img class="img-staff" src="../assets/css/img/img-container/img-container-staff.jpg" alt="">
                </div>
                <div class="container-staff-text">
                    <h2>Đội ngũ giảng viên</h2>
@@ -219,7 +255,7 @@
                     Các bạn học viên đã chuẩn bị và sẵn sàng để tham gia các khóa học của chúng tôi?
                </p>
                <p style="text-align: center;">
-                    <a href="#" class="btn-container-free">Khóa học miễn phí</a>
+                    <a href="http://localhost/web_5gg1/view/lesson.html" class="btn-container-free">Khóa học miễn phí</a>
                 </p>
                 <p style="text-align: center;">
                     Hi vọng các bạn sẽ đồng hành với chúng tôi trong suốt khoá học.
@@ -227,70 +263,20 @@
                 <p style="text-align: center;">Chúc các bạn hoàn thành tốt khóa học.</p>
            </div>
 
-       </div>
-       <!-- Phần cuối trang -->
-       <div id="footer">
-           <!-- Cột bên trái -->
-            <div class="footer-l">
-                <span>Copyright © 2019 <a class="footer-link" href=""> Trung Tâm Tin Học Đại học Sư Phạm TP.HCM</a></span>
-                
-                <div class="line03"></div>
-                <h4 style="font-weight: 200; margin-bottom: 10px; margin-left: 20px;">Liên hệ</h4>
-                <ul class="list-info-l">
-                    <li>Tầng trệt - Dãy A (A008,A009,A010) - Cơ sở 1</li>
-                    <li>Số 280 - Đường An Dương Vương</li>
-                    <li>Phường 4 - Quận 5 - Tp Hồ Chí Minh</li>
-                    <li><i class="ti-mobile"></i> Phone: <a style="text-decoration: none; color: #1092c4;" href="tel:(+84 - 28) 38.300.609">(+84 - 28) 38.300.609</a></li>
-                    <li><i class="ti-email"></i> Email: <a style="text-decoration: none; color: #1092c4;" href="mailto:thsp@hcmue.edu.vn">thsp@hcmue.edu.vn</a></li>
-                </ul>
-            </div>
+           
+            <!-- Form đăng ký tài khoản -->
+            <script>
+                // Get the modal
+                var modal = document.getElementById('id01');
 
-            <!-- Cột bên phải -->
-            
-            <div class="footer-r">
-                <h4 style="font-weight: 200;">Thành viên</h4>
-                <div class="footer-member">
-                    <div class="list-img-member">
-                        <img class="img-member" src="./assets/css/img/img-footer/member1.jpg" alt="">
-                        <span class="member-name"><a href="https://cvson-fivegg.cf/">Vũ Trường Sơn</a></span>
-                        <img class="img-member" src="assets/css/img/img-container/273611486_3086911428225430_5217724880724050808_n.png" alt="">
-                        <span class="member-name"><a href="https://cvtai-fivegg.cf/">Phạm Đức Tài</a></span>
-                        <img class="img-member" src="assets/css/img/img-container/7e75cf5185bc4ae213ad.jpg" alt="">
-                        <span class="member-name"><a href="https://nguyenminhduc.glitch.me">Nguyễn Minh Đức</a></span><br>
-                        <img class="img-member" src="assets/css/img/img-container/35afa880e26d2d33747c.jpg" alt="">
-                        <span class="member-name">Trần Minh Long</span>
-                        <img class="img-member" src="./assets/css/img/img-container/12f828df6232ad6cf423.jpg" alt="">
-                        <span class="member-name"><a href="https://vchien-fivegg.web.app/">Vũ Nguyễn Duy Hiền</a></span>
+                // When the user clicks anywhere outside of the modal, close it
+                // window.onclick = function(event) {
+                //     if (event.target == modal) {
+                //         modal.style.display = "none";
+                //     }
+                // }
+            </script>
+         </div>
 
-                    </div>
-                </div>
-            </div>
-
-
-
-
-
-
-        </div>
-       </div>
-   </div>
-   <script>
-    //    Slidershow
-
-    var slideIndex = 0;
-    carousel();
-
-    function carousel() {
-    var i;
-    var x = document.getElementsByClassName("slide");
-    for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";
-    }
-    slideIndex++;
-    if (slideIndex > x.length) {slideIndex = 1}
-    x[slideIndex-1].style.display = "block";
-    setTimeout(carousel, 4000); // Change image every 4 seconds
-    }
-   </script>
-</body>
-</html>
+     
+       
