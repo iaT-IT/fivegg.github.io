@@ -1,0 +1,772 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.Clear{
+    clear: both;
+}
+
+body{
+    background-color: #f0f0f0;
+}
+
+
+/* Main */
+#main{
+    width: 90%;
+    max-width: 1600px;
+    margin: 20px auto;
+    border-top: 4px solid #049AD7;
+    background-color: #fff;
+}
+/* Phần đầu */
+/* Header */
+.set-logo{
+    width: 20%;
+    height: 100%;
+}
+/* login */
+
+.login-header{
+    float: right;
+    padding: 12px;
+}
+
+.login-header .login{
+    display: flex;
+    flex-direction: row;
+}
+
+.ti-user{
+    width: 16px;
+    height: 16px;
+    background-color: #eee;
+}
+
+/* .login .ti-user , .ti-unlock{
+    padding: 10px 10px;
+    background-color: #eee;
+}  */
+
+/* .login .Sign-in , .Password{
+    padding: 5px;
+    width: 130px;
+    margin-right: 10px;
+    border: 1px solid #eee;
+}  */
+
+.login  input[type=text],input[type=mail] ,input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+
+.login  input[type=text]:focus , input[type=mail]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+.login .submit{
+    width: 38px;
+    height: 34px;
+    background: url("./img/login-btn.png") no-repeat 50% 50% #8ec63f;
+    border: none;
+}
+
+.login .submit:hover{
+    cursor: pointer;
+    opacity: 0.8;
+}
+.login-header .Forgot{
+    margin-top: 5px ;
+    text-align: right;
+    font-size: 15px;
+}
+
+.login-header .Forgot a{
+    text-decoration: none;
+    color: #049AD7;
+}
+
+.login-header .Forgot a:hover{
+    opacity: 0.6;
+    color:black;
+}
+
+/* nav */
+#header .nav{
+    /* display: inline-block; */
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(53, 53, 53);
+    width: 100%;
+}
+
+#header .nav-bar > li{
+    position: relative;
+    padding: 15px;
+    display: inline-block;
+}
+
+#header .nav li a{
+    display:block;
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+}
+
+#header .nav li:hover{
+    background: #049AD7;
+    display: inline-block;
+}
+
+/* nav-seclection-khóa học */
+
+.nav .nav-bar .icon-down{
+    font-size: 12px;
+    padding: 5px;
+}
+
+#header .nav .sub-nav{
+    display: none; 
+    position: absolute;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    background-color: #eee;
+    margin-top: 15px;
+    margin-left: -16px; 
+    border-bottom: 4px solid #1c5974;
+    min-width: 200px;
+}
+
+#header .nav .sub-nav > li{
+    list-style: none;
+    display: block;
+    padding: 12px;
+    
+}
+/* hiện menu con */
+#header .nav li:hover .sub-nav{
+    display:block;
+}
+
+#header .nav .sub-nav a{
+    color: #000;
+    line-height: 20px;
+}
+
+/* Search-btn */
+
+.search-btn{
+    position: relative;
+    color: #fff;
+    padding: 15px;
+    float: right;
+    background-color: #049AD7;
+    cursor: pointer;
+}
+.search-text{
+    position: absolute;
+    display: inline-block;
+    margin-left: -199px;
+}
+
+.search-btn .search-text .input-search-text{
+    height: 48px;
+    margin-top: -14px;
+    margin-left: 5px;
+    background-color: rgb(70, 70, 70);
+    border:none;
+    display: none; 
+}
+
+.search-btn:hover .input-search-text{
+    display: block;
+    color: #fff;
+}
+
+/* Slider-show */
+
+.slidershow .slide{
+    width: 100%;
+}
+
+
+/* Content */
+
+#content{
+    display: flex;
+    padding: 50px 60px;
+}
+
+#content .logo2 .logo-item{
+    padding: 20px;
+    width: 600px;
+    height: 100%;
+}
+
+#content .video{
+    width: 100%;
+    height: 100%;
+}
+
+.line01{
+    display: block;
+    padding: 2px;
+    background-color: #049AD7;
+    width: 10%;
+}
+
+/* container */
+
+.container-text1 > h4{
+    color: #555555;
+    font-size: 30px;
+    padding-bottom: 8px;
+}
+
+.container-text1 ,.container-text2 > p{
+    color: #555555;
+    font-size: 16px;
+    margin: 20px;
+    line-height: 1.6;
+}
+
+/* container-img */
+
+.container-select{
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container-box{
+    border:1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 6%);
+    width: 23%;
+    list-style: none;
+}
+.container-select .container-img{
+    width: 100%;
+    height: 100%;
+    padding: 6px;
+}
+
+.container-box .container-text{
+    font-size: 23px;
+    color: #555555;
+    line-height: 35px;
+    padding: 10px;
+}
+
+.container-box .container-btn{
+    margin: 12px 25%;
+    color: #fff;
+    display: block;
+    text-decoration: none;
+    padding: 12px 18px;
+    background-color: #049AD7;
+    font-size: 20px;
+}
+
+.container-box .container-btn:hover{
+    opacity: 0.7;
+}
+
+/* container-skill */
+
+.container-skill > h4{
+    font-size: 30px;
+    color: #555555;
+    margin: 20px;
+}
+
+.line03{
+    display: block;
+    padding: 2px;
+    background-color: #049AD7;
+    width: 20%;
+    margin: 20px 20px;
+    
+}
+
+.container-mysefl{
+    margin: 20px;
+    display: inline-flex;
+    justify-content: space-between;
+}
+
+.container-myskill{
+    list-style: none;    
+    width: 25%;
+    padding: 20px;
+}
+
+.container-myskill > h3{
+    font-size: 20px;
+    padding: 20px;
+}
+
+.container-myskill > p{
+    font-size: 16px;
+    color: #000;
+    line-height: 1.5;
+}
+
+.container-icon{
+    padding: 10px;
+    color:#049AD7;
+    font-size: 40px;
+    border-radius: 40px;
+    border: 2px solid;
+    border-width: medium;
+}
+
+.container-myskill:hover{
+    background-color: #f4f4f4;
+    opacity: 0.9;
+}
+
+.container-myskill:hover .container-icon{
+    background: #049AD7;
+    color: #fff;
+    transition: 1s;
+}
+
+/* container-staff */
+
+.container-staff{
+    display: inline-flex;
+    padding: 20px;
+    
+}
+
+.img-staff{
+    width: 100%;
+    height: 100%;
+    padding: 0 40px;
+}
+
+.container-staff-text{
+    width: 100%;
+    padding: 20px;
+    text-align: left;
+}
+
+.container-staff-text > h2{
+    font-size: 30px;
+    color: #555555;
+    
+}
+
+.container-staff-text > h5{
+    color: #555555;
+    font-size: 18px;
+    font-weight: 550;
+    margin: 20px 0;
+    line-height: 1.5;
+}
+
+.container-staff-text > p{
+    line-height: 1.5;
+    color: #555555;
+}
+
+.container-staff-text .line02
+{
+    display: block;
+    padding: 1px;
+    background-color: #049AD7;
+    width: 15%;
+    margin: 15px 0;
+}
+
+
+
+/* Container-free */
+
+.container-free{
+    
+    padding: 20px; 
+}
+
+.container-free > p {
+    margin: 15px;
+}
+
+.btn-container-free{
+    text-decoration: none;
+    display: inline-block;
+    padding: 14px;
+    background-color: #049AD7;
+    text-transform: uppercase;
+    color: #fff;
+    margin: 15px;
+    font-weight: 700;
+}
+
+.btn-container-free:hover{
+    opacity: 0.8;
+}
+
+/* Canas Menu - Đóng mở menu trái - Nội dung khóa học */
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: relative;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+  
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+   
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+  
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+  
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+  
+#content {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+  
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+} 
+/* menu accordion */
+
+/* Tạo kiểu cho các nút được sử dụng để mở 
+và đóng bảng điều khiển đàn accordion */
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 95%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+/* Thêm màu nền vào nút nếu nó được nhấp vào
+ (thêm lớp .active với JS) và khi bạn di chuyển chuột 
+ qua nó (di chuột) */
+  
+.active, .accordion:hover {
+    background-color: #ccc;
+}
+  
+.accordion:after {
+    content: '\002B';
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+  
+.active:after {
+    content: "\2212"; /* Ký tự Unicode csho dấu "trừ"  */
+}
+
+/* Tạo kiểu cho bảng điều khiển accordion. Lưu ý: bị ẩn theo mặc định */
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+/* From đăng ký tài khoản*/
+
+/* Full-width input fields */
+.modal-content  input[type=text],input[type=mail] ,input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+    
+}
+  
+  /* Thêm màu nền khi đầu vào có tiêu điểm */
+.modal-content  input[type=text]:focus , input[type=mail]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+/*Các kiểu bổ sung cho nút đăng ký*/
+
+/* .signupbtn {
+    padding: 14px 20px;
+    background-color: #45e057;
+} */
+  
+  /* Các kiểu bổ sung cho nút hủy */
+/* .cancelbtn {
+    padding: 14px 20px;
+    background-color: #cc372c;
+} */
+  
+  /* Nút hủy bỏ và đăng ký nổi và thêm chiều rộng bằng nhau */
+/* .cancelbtn, .signupbtn {
+    float: left;
+    width: 50%;
+} */
+
+/* .cancelbtn:hover{
+    color: #fff;
+    font-size: 15px;
+    background: red;
+    cursor: pointer;
+} */
+
+/* .signupbtn:hover{
+    color: #fff;
+    font-size: 15px;
+    background: green;
+    cursor: pointer;
+} */
+
+/* Submit đăng ký */
+
+.btn-dky{
+    width: 100%;
+    padding: 10px;
+    background-color: green;
+    color: #fff;
+    font-size: 16px;
+}
+
+.btn-dky:hover{
+    cursor: pointer;
+    opacity: 0.8;
+}
+  
+  /* Thêm đệm vào các phần tử chứa */
+.modal-container {
+    padding: 16px;
+}
+  
+  /* The Modal (background) */
+.modal {
+    display: none; /* Ẩn theo mặc định */
+    position: fixed; /* Giữ nguyên vị trí */
+    z-index: 1; /* Ngồi trên đỉnh */
+    text-align: left;
+    overflow: auto; /*Bật cuộn nếu cần*/ 
+    background-color: #fff;
+    padding-top: 50px;
+    top: 20%;
+    right: 20%;
+    left: 20%;
+    bottom: 5%;
+}
+  
+  /* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% từ trên xuống, 15% từ dưới lên và trung tâm */
+    border: 1px solid rgb(227, 223, 223);
+    width: 80%; /* Có thể nhiều hơn hoặc ít hơn, tùy thuộc vào kích thước màn hình */
+}
+
+.from-check{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    display: inline-block;
+    font-weight: 500;
+}
+  
+  /* Tạo kiểu cho thước ngang */
+hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+}
+  
+  /* Nút đóng modal (x) */
+.close {
+    position: absolute;
+    right: 35px;
+    top: 15px;
+    font-size: 25px;
+    font-weight: bold;
+    color: #221f1f;
+}
+  
+.close:hover,
+.close:focus {
+    color: #6a0e07;
+    cursor: pointer;
+}
+  
+/* Clear floats */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+  
+/* Thay đổi kiểu cho nút hủy và nút đăng ký trên các màn hình nhỏ bổ sung */
+/* @media screen and (max-width: 300px) {
+    .cancelbtn, .signupbtn {
+      width: 100%;
+    }
+} */
+
+
+/* Footer */
+
+
+/* footer-l cột bên trái */
+#footer{
+    width: 100%;
+    padding: 20px;
+    background-color: #292f38;
+    color: #fff;
+    display: inline-flex   ;
+}
+
+.footer-l{
+    display: inline-flex;
+    width: 50%;
+    flex-direction: column;
+    float: left;
+}
+
+.footer-link{
+    text-decoration: none;
+    color: #1092c4;
+}
+
+#footer .line03
+{
+    display: block;
+    padding: 1px;
+    background-color: #1092c4;
+    width: 30%;
+    margin: 15px 0;
+}
+
+.list-info-l{
+    list-style: none;
+    margin-left: 20px;
+}
+
+.list-info-l > li{
+    margin: 5px;
+    opacity: 0.7;
+} 
+
+
+/* footer-r cột phải */
+
+
+
+.footer-r{
+    display: flex;
+    flex-direction: column;
+    float: right;
+    width: 50%;
+    margin-top: 50px;
+}
+
+.footer-member{
+    padding: 10px;
+}
+
+.footer-r .img-member{
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    margin-top: 10px;
+}
+
+
+.footer-r .member-name{
+    font-size: 14px;
+    padding: 10px;
+}
+
+.footer-r .member-name > a{
+    text-decoration: none;
+    color: #fff;
+    opacity: 0.6;
+}
+
+.footer-r .member-name:hover > a{
+    
+    opacity: 1;
+}
+
+
+/* Content-htm */
+
+
+/* student training */
+.lesson-student{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.lesson-tinhoc{
+    background-image: linear-gradient(to right, rgba(214,52,104,1), rgba(90,15,174,1)) ;
+    padding: 30px;
+    border-radius:30px;
+    /* width: 400px; */
+}
+
+.lesson-nghiencuuKH{
+    background-image: linear-gradient(to right, rgba(214,52,104,1), rgba(90,15,174,1)) ;
+    padding: 30px;
+    border-radius:30px;
+    /* width: 400px; */
+}
+
+.links-tab:hover{
+    opacity: 0.8;
+    color: #000; 
+    text-transform: uppercase;   
+    transition: .5s;
+}
+
+.task-links:hover{
+    opacity: 1;
+    color: #000;
+}
+
+
+
+

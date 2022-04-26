@@ -1,0 +1,91 @@
+/* margin-top 20px */
+.mg-t20{
+    margin-top: 20px;
+}
+
+/* margin-bottom 20px */
+
+.mg-bt20
+{
+    margin-bottom: 20px;
+}
+/* margin-left 20px*/
+.mg-l20{
+    margin-left: 20px;
+}
+
+/* margin-right 20px*/
+.mg-r20{
+    margin-right: 20px;
+}
+
+
+/* margin 30px */
+.mg-30{
+    margin: 30px;
+}
+/* khoảng cách chữ Việt line-heght 1.5 */
+.line-h15{
+    line-height: 1.5;
+}
+
+/* căn đều lề cho đoạn văn */
+.t-jus{
+    text-align: justify;
+}
+
+/* Thụt đầu đoạn văn 30px*/
+.t-indent{
+    text-indent: 30px;
+}
+
+/* làm mờ chữ*/
+.t-opa{
+    opacity: 0.8;
+}
+
+/* chữ trắng */
+.t-white{
+    color: #fff;
+}
+
+/* chữ đen */
+.t-black{
+    color: #000;
+}
+
+/* bỏ dấu gạch chân của thẻ a */
+.t-dec{
+    text-decoration: none ;
+}
+
+/* Căn text giữa */
+.t-center{
+    text-align: center;
+}
+
+/* Cỡ chữ 25 */
+.t-size25{
+    font-size: 25px;
+}
+
+/* Cỡ 10 */
+.t-size10{
+    font-size: 10px;
+}
+
+/* Bỏ dấu đầu dòng list */
+.t-list-style{
+    list-style: none;
+}
+/* class chung css tiêu đề mỗi lesson */
+
+.title-content-htm{
+    background-color: #f0f0f0;
+    margin: 30px;
+    padding: 20px;
+    border-left: 5px solid #049AD7;
+    line-height: 1.6;
+    opacity: 0.6;
+}
+
